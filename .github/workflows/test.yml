@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ビルドとテストなどを検証する
+  build_check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [23.x]
+
+    permissions:
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: corepack enable && yarn install --immutable
+      # フォーマットチェック
+      - run: yarn lint
+      # テスト実行
+      - run: yarn test:coverage
+      # ビルドチェック
+      - name: Build check
+        run: yarn build
+      # カバレッジレポート出力
+      - name: Comment on the pull request
+        uses: davelosert/vitest-coverage-report-action@v2
