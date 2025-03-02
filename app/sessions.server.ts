@@ -12,7 +12,9 @@ const { getSession, commitSession, destroySession } =
   createCookieSessionStorage<SessionData, SessionFlashData>({
     cookie: {
       name: "__session",
-      domain: "*",
+      secure: true,
+      httpOnly: true,
+      sameSite: "strict",
     },
   });
 
