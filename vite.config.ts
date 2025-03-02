@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   test: {
     globals: true,
+    coverage: {
+      include: ["app/**"], // 対象はappディレクトリ配下
+      reporter: ["text", "json", "json-summary", "html"],
+    },
   },
 });
