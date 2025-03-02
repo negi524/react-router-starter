@@ -5,9 +5,8 @@ import pluginReact from "eslint-plugin-react";
 import { includeIgnoreFile } from "@eslint/compat";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-
 import jsxA11Y from "eslint-plugin-jsx-a11y";
-import * as importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import";
 import reactHooks from "eslint-plugin-react-hooks";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -32,11 +31,10 @@ export default tseslint.config(
   tseslint.configs.recommended,
   tseslint.configs.strict,
   tseslint.configs.stylistic,
-  importPlugin.flatConfigs?.recommended,
+  importPlugin.flatConfigs.recommended,
   {
     name: "base-setting",
     files: ["**/*"],
-    ignores: ["eslint.config.mjs"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -51,6 +49,12 @@ export default tseslint.config(
         ...globals.node,
         // TODO: あったほうが良いか検証する
         // ...globals.es2015,
+      },
+    },
+    settings: {
+      "import/internal-regex": "^~/",
+      "import/resolver": {
+        typescript: {},
       },
     },
   },
@@ -75,28 +79,29 @@ export default tseslint.config(
         { name: "Link", linkAttribute: "to" },
         { name: "NavLink", linkAttribute: "to" },
       ],
+      "import/internal-regex": "^~/",
       "import/resolver": {
         typescript: {},
       },
     },
   },
-  {
-    name: "typescript-setting",
-    files: ["**/*.{ts,tsx}"],
-    settings: {
-      "import/internal-regex": "^~/",
-      "import/resolver": {
-        node: {
-          extensions: [".ts", ".tsx"],
-        },
-        typescript: {
-          alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
-        },
-      },
-    },
-  },
-  {
-    name: "node",
-    files: ["eslint.config.mjs"],
-  },
+  // {
+  //   name: "eslint-config-file",
+  //   files: ["eslint.config.mjs"],
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.browser,
+  //       ...globals.commonjs,
+  //       ...globals.node,
+  //       // TODO: あったほうが良いか検証する
+  //       // ...globals.es2015,
+  //     },
+  //   },
+  //   settings: {
+  //     "import/internal-regex": "^~/",
+  //     "import/resolver": {
+  //       typescript: {},
+  //     },
+  //   },
+  // },
 );
