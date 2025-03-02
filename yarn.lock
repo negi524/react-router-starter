@@ -2041,7 +2041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/vite@npm:^4.0.0":
+"@tailwindcss/vite@npm:^4.0.9":
   version: 4.0.9
   resolution: "@tailwindcss/vite@npm:4.0.9"
   dependencies:
@@ -6407,7 +6407,7 @@ __metadata:
     "@react-router/dev": "npm:^7.2.0"
     "@react-router/node": "npm:^7.2.0"
     "@react-router/serve": "npm:^7.2.0"
-    "@tailwindcss/vite": "npm:^4.0.0"
+    "@tailwindcss/vite": "npm:^4.0.9"
     "@types/eslint-plugin-jsx-a11y": "npm:^6.10.0"
     "@types/node": "npm:^22.13.8"
     "@types/react": "npm:^19.0.10"
@@ -6425,7 +6425,7 @@ __metadata:
     react-dom: "npm:^19.0.0"
     react-router: "npm:^7.2.0"
     react-router-devtools: "npm:^1.1.6"
-    tailwindcss: "npm:^4.0.0"
+    tailwindcss: "npm:^4.0.9"
     typescript: "npm:5.7.3"
     typescript-eslint: "npm:^8.25.0"
     vite: "npm:^5.4.11"
@@ -7256,7 +7256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.9, tailwindcss@npm:^4.0.0":
+"tailwindcss@npm:4.0.9, tailwindcss@npm:^4.0.9":
   version: 4.0.9
   resolution: "tailwindcss@npm:4.0.9"
   checksum: 10c0/92e5f0ff9d98b4b7c79419e21b02d703aafa86f1d9b92b039cc0ac3e2963e763c5c9bcfc2afdf9f46fc709812c1aab12565b02bebe70dcaaccb2773884cc0654
