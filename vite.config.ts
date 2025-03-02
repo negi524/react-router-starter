@@ -8,6 +8,7 @@ export default defineConfig({
   test: {
     globals: true,
     coverage: {
+      enabled: true, // UIで閲覧するため
       include: ["app/**"], // 対象はappディレクトリ配下
       reporter: ["text", "json", "json-summary", "html"],
     },
