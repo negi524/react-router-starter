@@ -1,6 +1,6 @@
 import { commitSession, getSession } from "~/sessions.server";
-import type { Route } from "../+types/_index";
 import { data, redirect } from "react-router";
+import type { Route } from "../signin/+types/route";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const session = await getSession(request.headers.get("Cookie"));
