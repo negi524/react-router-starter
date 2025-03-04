@@ -16,6 +16,7 @@ const { getSession, commitSession, destroySession } =
       secure: true,
       httpOnly: true,
       sameSite: "strict",
+      // TODO: セキュリティのため、secretを設定する
     },
   });
 
