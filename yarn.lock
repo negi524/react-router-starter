@@ -1594,6 +1594,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-router/fs-routes@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@react-router/fs-routes@npm:7.2.0"
+  dependencies:
+    minimatch: "npm:^9.0.0"
+  peerDependencies:
+    "@react-router/dev": ^7.2.0
+    typescript: ^5.1.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/aee8f8cbe9766f33c7704abc5d809b51defc1a1cfa838d5c2fe7f1d9bcd23cb2effcd7f1ddaddc60029f9b2863bf7ba683649d5d789d30672d6686ee549331f6
+  languageName: node
+  linkType: hard
+
 "@react-router/node@npm:7.2.0, @react-router/node@npm:^7.2.0":
   version: 7.2.0
   resolution: "@react-router/node@npm:7.2.0"
@@ -5542,7 +5557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.4":
+"minimatch@npm:^9.0.0, minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
   dependencies:
@@ -6469,6 +6484,7 @@ __metadata:
     "@eslint/compat": "npm:^1.2.7"
     "@eslint/js": "npm:^9.21.0"
     "@react-router/dev": "npm:^7.2.0"
+    "@react-router/fs-routes": "npm:^7.2.0"
     "@react-router/node": "npm:^7.2.0"
     "@react-router/serve": "npm:^7.2.0"
     "@tailwindcss/vite": "npm:^4.0.9"
