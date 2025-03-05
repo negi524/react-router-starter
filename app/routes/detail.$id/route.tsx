@@ -9,17 +9,11 @@ export async function loader({ params }: Route.LoaderArgs) {
   }
 
   if (num < 0) {
-    throw data("内部エラー", {
-      status: 500,
-      statusText: "INTERNAL SERVER ERROR",
-    });
+    throw data<string>("内部エラー", { status: 500 });
   }
 
   if (100 <= num) {
-    throw data("IDが見つかりません", {
-      status: 404,
-      statusText: "NOT FOUND",
-    });
+    throw data<string>("IDが見つかりません", { status: 404 });
   }
 
   return {
