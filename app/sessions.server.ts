@@ -16,6 +16,7 @@ const { getSession, commitSession, destroySession } =
       secure: true,
       httpOnly: true,
       sameSite: "strict",
+      maxAge: 60 * 3, // 有効期限は3分
       secrets: [process.env.SESSION_SECRET || ""],
     },
   });
