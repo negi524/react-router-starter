@@ -8,10 +8,17 @@ export async function loader({ params }: Route.LoaderArgs) {
     throw new Error("数値ではありません");
   }
 
-  if (num < 0 || 100 <= num) {
+  if (num < 0) {
+    throw data("内部エラー", {
+      status: 500,
+      statusText: "INTERNAL SERVER ERROR",
+    });
+  }
+
+  if (100 <= num) {
     throw data("IDが見つかりません", {
       status: 404,
-      statusText: "IDが見つかりません",
+      statusText: "NOT FOUND",
     });
   }
 
@@ -30,6 +37,7 @@ export default function DetailPageRoute({ loaderData }: Route.ComponentProps) {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+  console.log({ error });
   if (isRouteErrorResponse(error)) {
     return (
       <>
