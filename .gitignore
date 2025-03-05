@@ -20,3 +20,5 @@
 
 # Vitest
 coverage/
+
+*storybook.log
