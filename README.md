@@ -24,6 +24,12 @@ Install the dependencies:
 yarn install
 ```
 
+### Set environment variables
+
+```bash
+cp .env.sample .env.development
+```
+
 ### Development
 
 Start the development server with HMR:
