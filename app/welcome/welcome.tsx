@@ -23,7 +23,7 @@ export function Welcome() {
           onClick={openMenu}
         />
         <div
-          className={`fixed top-0 right-0 w-xs h-screen shadow bg-white transition-transform delay-150 duration-300 ease ${menuOpen ? "" : "translate-x-[100%]"}`}
+          className={`fixed top-0 right-0 w-xs h-screen overflow-y-auto shadow bg-white transition-transform delay-150 duration-300 ease ${menuOpen ? "" : "translate-x-[100%]"}`}
         >
           <FaXmark
             className="absolute top-0 right-0 p-3"
