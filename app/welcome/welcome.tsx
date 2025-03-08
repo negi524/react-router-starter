@@ -30,13 +30,18 @@ export function Welcome() {
             size="4rem"
             onClick={closeMenu}
           />
-          <h3>メニュー</h3>
-          <ul>
-            <li>メニュー1</li>
-            <li>メニュー2</li>
-            <li>メニュー3</li>
-            <li>メニュー4</li>
-            <li>メニュー5</li>
+          <h2 className="text-lg m-5">ページ一覧</h2>
+          <ul className="ml-5">
+            {resources.map(({ href, text }) => (
+              <li key={href} className="mb-3">
+                <a
+                  className="text-blue-700 hover:underline dark:text-blue-500"
+                  href={href}
+                >
+                  {text}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -94,5 +99,9 @@ const resources = [
   {
     href: "/signout",
     text: "Sign Out",
+  },
+  {
+    href: "/detail",
+    text: "Detail",
   },
 ];
