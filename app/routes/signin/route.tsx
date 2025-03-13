@@ -77,7 +77,7 @@ export default function SignInRoute({ loaderData }: Route.ComponentProps) {
           <label>
             パスワード: <input type="password" name="password" />
           </label>
-          <button className="py-1 px-5 bg-sky-500 rounded-2xl text-white cursor-pointer">
+          <button className="cursor-pointer rounded-2xl bg-sky-500 px-5 py-1 text-white">
             送信
           </button>
         </form>
