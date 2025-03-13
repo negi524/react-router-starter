@@ -16,7 +16,7 @@ export default function SignOutRoute() {
     <div>
       <h1>Sign out</h1>
       <Form method="post">
-        <button className="py-1 px-5 bg-sky-500 rounded-2xl text-white cursor-pointer">
+        <button className="cursor-pointer rounded-2xl bg-sky-500 px-5 py-1 text-white">
           サインアウト
         </button>
       </Form>

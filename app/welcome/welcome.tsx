@@ -23,14 +23,14 @@ export function Welcome() {
           onClick={openMenu}
         />
         <div
-          className={`fixed top-0 right-0 w-xs h-screen overflow-y-auto shadow bg-white transition-transform delay-150 duration-300 ease ${menuOpen ? "" : "translate-x-[100%]"}`}
+          className={`ease fixed top-0 right-0 h-screen w-xs overflow-y-auto bg-white shadow transition-transform delay-150 duration-300 ${menuOpen ? "" : "translate-x-[100%]"}`}
         >
           <FaXmark
             className="absolute top-0 right-0 p-3"
             size="4rem"
             onClick={closeMenu}
           />
-          <h2 className="text-lg m-5">ページ一覧</h2>
+          <h2 className="m-5 text-lg">ページ一覧</h2>
           <ul className="ml-5">
             {resources.map(({ href, text }) => (
               <li key={href} className="mb-3">
@@ -44,7 +44,7 @@ export function Welcome() {
             ))}
           </ul>
         </div>
-        <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
+        <div className="flex min-h-0 flex-1 flex-col items-center gap-16">
           <header className="flex flex-col items-center gap-9">
             <div className="w-[500px] max-w-[100vw] p-4">
               <img
@@ -59,9 +59,9 @@ export function Welcome() {
               />
             </div>
           </header>
-          <div className="max-w-[300px] w-full space-y-6 px-4">
-            <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-              <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
+          <div className="w-full max-w-[300px] space-y-6 px-4">
+            <nav className="space-y-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
+              <p className="text-center leading-6 text-gray-700 dark:text-gray-200">
                 What&apos;s next?
               </p>
               <ul>
