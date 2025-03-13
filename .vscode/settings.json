@@ -1,6 +1,4 @@
 {
   "prettier.configPath": ".prettierrc.js",
-  "editor.formatOnSave": true,
-  "prettier.bracketSameLine": false,
-  "prettier.enableDebugLogs": false
+  "editor.formatOnSave": true
 }
