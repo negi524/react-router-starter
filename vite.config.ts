@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
     server: {
-      port: env.VITE_EXPOSE_PORT,
+      port: Number(env.VITE_EXPOSE_PORT) || 5173,
     },
     plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   };
