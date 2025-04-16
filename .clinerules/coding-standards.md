@@ -13,8 +13,8 @@
 
 ## 環境変数
 
-- 環境変数は`.env.sample`を参照すること
-- リポジトリをクローンしたときに`cp .env.sample .env.development`と実行することで環境構築できるようにすること
+- 環境変数は`.env.example`を参照すること
+- リポジトリをクローンしたときに`cp .env.example .env.development`と実行することで環境構築できるようにすること
 
 ## Route型のインポート
 

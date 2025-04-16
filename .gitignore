@@ -3,7 +3,7 @@
 
 # Environment variables
 .env.*
-!.env.sample
+!.env.example
 
 # React Router
 /.react-router/
