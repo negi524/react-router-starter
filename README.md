@@ -27,7 +27,7 @@ yarn install
 ### Set environment variables
 
 ```bash
-cp .env.sample .env.development
+cp .env.example .env.development
 ```
 
 ### Development

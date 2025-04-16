@@ -2,15 +2,17 @@
 /node_modules/
 
 # Environment variables
-.env.*
+
+.env.\*
 !.env.example
 
 # React Router
-/.react-router/
+
 /build/
 
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-.yarn/*
+
+.yarn/\*
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
@@ -19,4 +21,5 @@
 !.yarn/versions
 
 # Vitest
+
 coverage/
