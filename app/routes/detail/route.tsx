@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import type { Route } from "./+types/route";
 
 export async function loader() {
   return {
@@ -7,10 +6,7 @@ export async function loader() {
   };
 }
 
-export default function DetailListPageRoute({
-  loaderData,
-}: Route.ComponentProps) {
-  console.log({ loaderData });
+export default function DetailListPageRoute() {
   return (
     <div>
       <h1 className="text-4xl">これは一覧ページ</h1>
