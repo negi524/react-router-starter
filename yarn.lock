@@ -6871,12 +6871,12 @@ __metadata:
     isbot: "npm:^5.1.27"
     prettier: "npm:^3.5.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
-    react: "npm:^19.0.0"
+    react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     react-icons: "npm:^5.5.0"
     react-router: "npm:^7.6.0"
     react-router-devtools: "npm:^1.1.10"
-    tailwindcss: "npm:^4.0.13"
+    tailwindcss: "npm:^4.1.6"
     typescript: "npm:5.8.3"
     typescript-eslint: "npm:^8.26.1"
     vite: "npm:^6.3.5"
@@ -6930,10 +6930,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0":
-  version: 19.0.0
-  resolution: "react@npm:19.0.0"
-  checksum: 10c0/9cad8f103e8e3a16d15cb18a0d8115d8bd9f9e1ce3420310aea381eb42aa0a4f812cf047bb5441349257a05fba8a291515691e3cb51267279b2d2c3253f38471
+"react@npm:^19.1.0":
+  version: 19.1.0
+  resolution: "react@npm:19.1.0"
+  checksum: 10c0/530fb9a62237d54137a13d2cfb67a7db6a2156faed43eecc423f4713d9b20c6f2728b026b45e28fcd72e8eadb9e9ed4b089e99f5e295d2f0ad3134251bdd3698
   languageName: node
   linkType: hard
 
@@ -7806,17 +7806,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.1.6":
+"tailwindcss@npm:4.1.6, tailwindcss@npm:^4.1.6":
   version: 4.1.6
   resolution: "tailwindcss@npm:4.1.6"
   checksum: 10c0/de5a442d23d20872bfccb2b451720e8031dde27e1984a1ccb1d8c7308915213f1b3b62724ce5176d1b7031fbedc6a75fe844b73e3f13443141c11739447d8808
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "tailwindcss@npm:4.0.13"
-  checksum: 10c0/43532224d5a9072b56b403e416dbb8a6f3bef7787a551d4c3e1717cfb7757d88fc59812c7a3cb27f5fff66dbea2243c03a4e5b94d4fe2c9333f8b048adbdfd3c
   languageName: node
   linkType: hard
 
