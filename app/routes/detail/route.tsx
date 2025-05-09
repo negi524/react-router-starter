@@ -1,11 +1,5 @@
 import { Outlet } from "react-router";
 
-export async function loader() {
-  return {
-    sample: 1,
-  };
-}
-
 export default function DetailListPageRoute() {
   return (
     <div>

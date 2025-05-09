@@ -25,7 +25,7 @@
 `app/routes/product.tsx`というファイルで型をインポートする場合は、
 
 ```tsx
-import type { Route } from "./+types/product";
+import type { Route } from "./types/product";
 ```
 
 という形式でそのルート固有の型をインポートすることが可能なので、これを利用すること。
@@ -35,7 +35,7 @@ import type { Route } from "./+types/product";
 
 - ReactRouterの`ErrorBoundary`を使用してエラーをキャッチし、適切なエラーページを表示すること
 - そのコンポーネントで発生したエラーは、原則そのファイルに記載されている`ErrorBoundary`で処理を完了させること
-- エラーハンドリングが必要なファイルでは`react-router`ライブラリからインポート可能である`data`, `isRouteErrorResponse`を使用すること
+- エラーハンドリングが必要あんファイルでは`react-router`ライブラリからインポート可能である`data`, `isRouteErrorResponse`を使用すること
 - `loader`もしくは`action`関数でエラーが発生した場合、`data`をthrowすることで適切なステータスコードとメッセージを設定すること
 
 ### エラーハンドリングの例
