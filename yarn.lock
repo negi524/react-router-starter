@@ -4772,10 +4772,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.0.0":
-  version: 16.0.0
-  resolution: "globals@npm:16.0.0"
-  checksum: 10c0/8906d5f01838df64a81d6c2a7b7214312e2216cf65c5ed1546dc9a7d0febddf55ffa906cf04efd5b01eec2534d6f14859a89535d1a68241832810e41ef3fd5bb
+"globals@npm:^16.1.0":
+  version: 16.1.0
+  resolution: "globals@npm:16.1.0"
+  checksum: 10c0/51df6319b5b9e679338baf058ecf1125af0d3148b97e57592deabd65fca5c5dcdcca321d7589282bd6afbea9f5a40bc7329c746f46d56780813d7d1c457209a2
   languageName: node
   linkType: hard
 
@@ -5296,10 +5296,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isbot@npm:^5.1.23":
-  version: 5.1.23
-  resolution: "isbot@npm:5.1.23"
-  checksum: 10c0/30fdf1f914653e983c8dcacc5b91ca766e3e182a8e3086f8674f6607e4bd4bd7a793ffd784a97b24b9fe918ca8bc7e0893023c52d678ea8e6be1c2afdc6505ff
+"isbot@npm:^5.1.27":
+  version: 5.1.27
+  resolution: "isbot@npm:5.1.27"
+  checksum: 10c0/c3a434c0388fb21932c29682f82a4e51cb7fb87d819af086e96747dff4ed9b6b0bfc5038432cfab213e283fb9ce30ba48cf15d856b08b908b1f29b00570070f3
   languageName: node
   linkType: hard
 
@@ -6718,14 +6718,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.0.0":
-  version: 19.0.0
-  resolution: "react-dom@npm:19.0.0"
+"react-dom@npm:^19.1.0":
+  version: 19.1.0
+  resolution: "react-dom@npm:19.1.0"
   dependencies:
-    scheduler: "npm:^0.25.0"
+    scheduler: "npm:^0.26.0"
   peerDependencies:
-    react: ^19.0.0
-  checksum: 10c0/a36ce7ab507b237ae2759c984cdaad4af4096d8199fb65b3815c16825e5cfeb7293da790a3fc2184b52bfba7ba3ff31c058c01947aff6fd1a3701632aabaa6a9
+    react: ^19.1.0
+  checksum: 10c0/3e26e89bb6c67c9a6aa86cb888c7a7f8258f2e347a6d2a15299c17eb16e04c19194e3452bc3255bd34000a61e45e2cb51e46292392340432f133e5a5d2dfb5fc
   languageName: node
   linkType: hard
 
@@ -6867,12 +6867,12 @@ __metadata:
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
     eslint-plugin-react: "npm:^7.37.4"
     eslint-plugin-react-hooks: "npm:^5.2.0"
-    globals: "npm:^16.0.0"
-    isbot: "npm:^5.1.23"
+    globals: "npm:^16.1.0"
+    isbot: "npm:^5.1.27"
     prettier: "npm:^3.5.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
     react: "npm:^19.0.0"
-    react-dom: "npm:^19.0.0"
+    react-dom: "npm:^19.1.0"
     react-icons: "npm:^5.5.0"
     react-router: "npm:^7.6.0"
     react-router-devtools: "npm:^1.1.10"
@@ -7298,10 +7298,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "scheduler@npm:0.25.0"
-  checksum: 10c0/a4bb1da406b613ce72c1299db43759526058fdcc413999c3c3e0db8956df7633acf395cb20eb2303b6a65d658d66b6585d344460abaee8080b4aa931f10eaafe
+"scheduler@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "scheduler@npm:0.26.0"
+  checksum: 10c0/5b8d5bfddaae3513410eda54f2268e98a376a429931921a81b5c3a2873aab7ca4d775a8caac5498f8cbc7d0daeab947cf923dbd8e215d61671f9f4e392d34356
   languageName: node
   linkType: hard
 
