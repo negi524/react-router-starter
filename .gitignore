@@ -20,3 +20,6 @@
 
 # Vitest
 coverage/
+
+# mise
+mise.local.toml
