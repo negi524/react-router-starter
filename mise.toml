@@ -1,2 +1,12 @@
 [tools]
 node = "22"
+
+[tasks.check]
+description = "全てのコマンドをチェックする"
+run = [
+  "yarn typecheck",
+  "yarn format",
+  "yarn lint",
+  "yarn test:coverage",
+  "yarn build"
+]
