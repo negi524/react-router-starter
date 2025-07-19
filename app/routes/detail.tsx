@@ -1,5 +1,5 @@
 import { data, isRouteErrorResponse } from "react-router";
-import type { Route } from "./+types/route";
+import type { Route } from "./+types/detail";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const num = Number(params.id);
