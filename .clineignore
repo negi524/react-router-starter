@@ -10,16 +10,6 @@
 
 /build/
 
-# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-
-.yarn/\*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
 # Vitest
 
 coverage/
