@@ -21,14 +21,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: corepack enable && yarn install --immutable
+      - run: corepack enable && pnpm install --frozen-lockfile
       # フォーマットチェック
-      - run: yarn lint
+      - run: pnpm run lint
       # テスト実行
-      - run: yarn test:coverage
+      - run: pnpm run test:coverage
       # ビルドチェック
       - name: Build check
-        run: yarn build
+        run: pnpm run build
       # カバレッジレポート出力
       - name: Comment on the pull request
         uses: davelosert/vitest-coverage-report-action@v2

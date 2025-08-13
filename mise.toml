@@ -4,9 +4,9 @@ node = "22"
 [tasks.check]
 description = "全てのコマンドをチェックする"
 run = [
-  "yarn typecheck",
-  "yarn format",
-  "yarn lint",
-  "yarn test:coverage",
-  "yarn build"
+  "pnpm run typecheck",
+  "pnpm run format",
+  "pnpm run lint",
+  "pnpm run test:coverage",
+  "pnpm run build"
 ]
