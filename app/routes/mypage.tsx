@@ -1,14 +1,8 @@
-import { redirect } from "react-router";
 import { getSession } from "~/sessions.server";
 import type { Route } from "./+types/mypage";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const session = await getSession(request.headers.get("Cookie"));
-
-  if (!session.has("userId")) {
-    // サインインしていない場合は、サインインページにリダイレクト
-    return redirect("/signin");
-  }
 
   return {
     userId: session.get("userId"),
