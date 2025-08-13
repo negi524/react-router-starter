@@ -1,7 +1,6 @@
 import { commitSession, getSession } from "~/sessions.server";
 import { data, redirect } from "react-router";
 import type { Route } from "./+types/signin";
-// import type { Route } from "./signin/+types/route";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const session = await getSession(request.headers.get("Cookie"));
@@ -21,6 +20,9 @@ export async function loader({ request }: Route.LoaderArgs) {
   );
 }
 
+/**
+ * 値がnullではなければログイン可能
+ */
 export async function action({ request }: Route.ActionArgs) {
   const session = await getSession(request.headers.get("Cookie"));
 
