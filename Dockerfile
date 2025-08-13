@@ -1,22 +1,31 @@
-FROM node:20-alpine AS development-dependencies-env
-COPY . /app
-WORKDIR /app
-RUN npm ci
+FROM node:22-slim AS base
+# pnpmの設定
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN apt-get update -y && \ 
+  apt-get install -y openssl
+RUN corepack enable
 
-FROM node:20-alpine AS production-dependencies-env
-COPY ./package.json package-lock.json /app/
-WORKDIR /app
-RUN npm ci --omit=dev
+# ビルド用イメージ
+FROM base AS builder
 
-FROM node:20-alpine AS build-env
-COPY . /app/
-COPY --from=development-dependencies-env /app/node_modules /app/node_modules
 WORKDIR /app
-RUN npm run build
 
-FROM node:20-alpine
-COPY ./package.json package-lock.json /app/
-COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
+COPY . .
+
+RUN pnpm i --prod --frozen-lockfile && \
+  pnpm run build
+
+# 実行用イメージ
+FROM base
+
 WORKDIR /app
-CMD ["npm", "run", "start"]
+
+# ビルドの成果物をコピー
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/node_modules ./node_modules
+
+EXPOSE 3000
+
+ENTRYPOINT [ "pnpm", "run", "start" ]
