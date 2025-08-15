@@ -1,5 +1,6 @@
 import { data, isRouteErrorResponse } from "react-router";
 import type { Route } from "./+types/detail";
+import { logger } from "~/config/logger";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const num = Number(params.id);
@@ -31,7 +32,7 @@ export default function DetailPageRoute({ loaderData }: Route.ComponentProps) {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  console.log({ error });
+  logger.error({ error });
   if (isRouteErrorResponse(error)) {
     return (
       <>
