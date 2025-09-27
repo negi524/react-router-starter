@@ -8,7 +8,7 @@ interface Post {
 }
 
 export async function loader() {
-  console.log(`process.env.NODE_ENV: ${process.env.NODE_ENV}`);
+  console.log(`process.env.NODE_ENV: ${process.env.APP_ENV}`);
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = (await response.json()) as Post[];
   return posts;
