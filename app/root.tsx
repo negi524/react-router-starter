@@ -11,7 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { BasicError } from "./components/error/BasicError";
 import { UnknownError } from "./components/error/UnknownError";
-import { loggingMiddleware } from "./middleware/loggingMiddleware";
+import { loggingMiddleware } from "./middleware/loggingMiddleware.server";
 
 export const middleware: Route.MiddlewareFunction[] = [loggingMiddleware];
 
