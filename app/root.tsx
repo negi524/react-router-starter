@@ -11,6 +11,9 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { BasicError } from "./components/error/BasicError";
 import { UnknownError } from "./components/error/UnknownError";
+import { loggingMiddleware } from "./middleware/loggingMiddleware";
+
+export const middleware: Route.MiddlewareFunction[] = [loggingMiddleware];
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
