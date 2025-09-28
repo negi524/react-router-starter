@@ -9,21 +9,20 @@ export async function loggingMiddleware(
   next: () => Promise<Response>,
 ) {
   const session = await getSession(request.headers.get("Cookie"));
-  console.log({ request });
   const url = new URL(request.url);
+  const startTime = Date.now();
+
+  const response = await next();
+
+  const duration = Date.now() - startTime;
   logger.info({
-    access: "request",
     method: request.method,
     path: url.pathname,
+    status: response.status,
+    duration,
     ip: request.headers.get("x-forwarded-for"),
     userId: session.get("userId") ?? null,
   });
-  const response = await next();
-  logger.info({
-    access: "response",
-    status: response.status,
-    method: request.method,
-    path: url.pathname,
-  });
+
   return response;
 }
