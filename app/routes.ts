@@ -15,4 +15,5 @@ export default [
   route("detail/:id", "./routes/detail.tsx"),
   route("signin", "./routes/signin.tsx"),
   route("signout", "./routes/signout.tsx"),
+  route("edit", "./routes/edit.tsx"),
 ] satisfies RouteConfig;
