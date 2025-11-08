@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function DetailPageRoute() {
+export default function EditPageRoute() {
   useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       event.preventDefault();
@@ -13,6 +13,7 @@ export default function DetailPageRoute() {
     <div>
       <h2>編集画面</h2>
       <textarea id="message" name="message" className="border"></textarea>
+      <br />
       <a href="/">Home</a>
     </div>
   );
