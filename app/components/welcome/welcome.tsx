@@ -23,7 +23,7 @@ export function Welcome() {
           onClick={openMenu}
         />
         <div
-          className={`ease fixed top-0 right-0 h-screen w-xs overflow-y-auto bg-white shadow transition-transform delay-150 duration-300 ${menuOpen ? "" : "translate-x-[100%]"}`}
+          className={`ease fixed top-0 right-0 h-screen w-xs overflow-y-auto bg-white shadow transition-transform delay-150 duration-300 ${menuOpen ? "" : "translate-x-full"}`}
         >
           <FaXmark
             className="absolute top-0 right-0 p-3"
@@ -46,7 +46,7 @@ export function Welcome() {
         </div>
         <div className="flex min-h-0 flex-1 flex-col items-center gap-16">
           <header className="flex flex-col items-center gap-9">
-            <div className="w-[500px] max-w-[100vw] p-4">
+            <div className="w-125 max-w-[100vw] p-4">
               <img
                 src={logoLight}
                 alt="React Router"
@@ -59,7 +59,7 @@ export function Welcome() {
               />
             </div>
           </header>
-          <div className="w-full max-w-[300px] space-y-6 px-4">
+          <div className="w-full max-w-75 space-y-6 px-4">
             <nav className="space-y-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
               <p className="text-center leading-6 text-gray-700 dark:text-gray-200">
                 What&apos;s next?
@@ -70,7 +70,6 @@ export function Welcome() {
                     <a
                       className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
                       href={href}
-                      target="_blank"
                       rel="noreferrer"
                     >
                       {text}
@@ -82,7 +81,7 @@ export function Welcome() {
           </div>
         </div>
       </main>
-      <div className="h-[800px]"></div>
+      <div className="h-200"></div>
     </>
   );
 }
