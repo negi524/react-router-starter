@@ -52,7 +52,7 @@ export default tseslint.config(
     ...pluginReact.configs.flat.recommended,
     ...pluginReact.configs.flat["jsx-runtime"],
     ...jsxA11Y.flatConfigs.recommended,
-    ...reactHooks.configs["recommended-latest"],
+    ...reactHooks.configs.flat.recommended,
     languageOptions: {
       ...pluginReact.configs.flat.recommended.languageOptions,
       ...pluginReact.configs.flat["jsx-runtime"].languageOptions,

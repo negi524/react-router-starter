@@ -1,5 +1,6 @@
 [tools]
-node = "22"
+node = "25.3"
+pnpm = "10.28"
 
 [tasks.check]
 description = "全てのコマンドをチェックする"

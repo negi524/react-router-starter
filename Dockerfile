@@ -1,10 +1,12 @@
-FROM node:22-slim AS base
+FROM node:25-slim AS base
+RUN apt-get update -y && \ 
+  apt-get install -y openssl && \
+  apt-get install -y wget
+
 # pnpmの設定
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN apt-get update -y && \ 
-  apt-get install -y openssl
-RUN corepack enable
+RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
 
 # ビルド用イメージ
 FROM base AS builder
@@ -13,7 +15,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pnpm i --prod --frozen-lockfile && \
+RUN pnpm i --frozen-lockfile && \
   pnpm run build
 
 # 実行用イメージ
