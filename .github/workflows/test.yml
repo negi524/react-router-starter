@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [25.x]
+        node-version: [26.x]
 
     permissions:
       pull-requests: write
