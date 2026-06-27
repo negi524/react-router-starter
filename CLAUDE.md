@@ -42,8 +42,6 @@ CI（`.github/workflows/test.yml`）は main 向けPRで `lint` / `test:coverage
 - `layout("./routes/layout/authLayout.tsx", [...])` … 認証ガード付きの子ルートをネスト
 - `route("detail/:id", "./routes/detail.tsx")` … 動的パラメータ
 
-> `.clinerules/documentation.md` には `detail.$id/route.tsx` のようなファイルベース規約の記述があるが、**現状の実装とは異なる**。実態は上記の設定ベース。
-
 ### 型の自動生成（重要）
 
 各ルートの型は React Router が `.react-router/types/` に生成する。ルートファイル内では必ずその固有型をインポートする:
@@ -73,7 +71,7 @@ import type { Route } from "./+types/detail";  // routes/detail.tsx の場合
 - `loader` / `action` 内でのエラーは `react-router` の `data` を **throw** してステータスとメッセージを設定する: `throw data<string>("不正なパラメータです", { status: 400 })`。
 - `ErrorBoundary` では `isRouteErrorResponse(error)` で `data` throw 由来のエラー（`BasicError`）と未捕捉エラー（`UnknownError`）を分岐する。共通コンポーネントは `app/components/error/`。
 
-## コーディング規約（`.clinerules/` より）
+## コーディング規約
 
 - **関数型アプローチ**: 純粋関数を優先、変数は原則イミュータブル、副作用を分離、型安全性を確保。
 - パスエイリアス `~/*` → `app/*`（tsconfig / vitest 双方で設定済み）。
