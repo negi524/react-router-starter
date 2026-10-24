@@ -8,12 +8,13 @@ import { fileURLToPath } from "node:url";
 import jsxA11Y from "eslint-plugin-jsx-a11y";
 import importPlugin from "eslint-plugin-import";
 import reactHooks from "eslint-plugin-react-hooks";
+import { defineConfig } from "vite";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, ".gitignore");
 
-export default tseslint.config(
+export default defineConfig(
   includeIgnoreFile(gitignorePath),
   pluginJs.configs.recommended,
   tseslint.configs.recommended,
